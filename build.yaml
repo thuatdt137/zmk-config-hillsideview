@@ -16,7 +16,7 @@ include:
   - board: nice_nano_v2
     shield: swept_left nice_view
   - board: nice_nano_v2
-    shield: swept_right nice_view
+    shield: swept_right
   - board: nice_nano_v2
     shield: settings_reset
 
