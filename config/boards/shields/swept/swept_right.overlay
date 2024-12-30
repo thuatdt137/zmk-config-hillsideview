@@ -21,11 +21,17 @@
     ;
 };
 
-&i2c0 {
-    status = "okay";
-    glidepoint0: glidepoint@2a {
-        status = "okay";
-    };
+&chosen {
+  zephyr,display = &nice_view;
+};
+
+// nice view bus
+&nice_view_spi {
+  status = "disable";
+};
+
+&nice_view {
+  status = "disable";
 };
 
 &pinctrl {  
@@ -46,11 +52,11 @@
 };
 
 &i2c0 {
-    status = "disabled";
+    status = "okay";
     glidepoint0: glidepoint@2a {
         compatible = "cirque,pinnacle";
         reg = <0x2a>;
-        status = "disabled";
+        status = "okay";
         dr-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH)>;
 
         sensitivity = "1x";
