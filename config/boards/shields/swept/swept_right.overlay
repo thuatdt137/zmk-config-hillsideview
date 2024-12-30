@@ -21,18 +21,6 @@
     ;
 };
 
-&chosen {
-  zephyr,display = &nice_view;
-};
-
-&nice_view_spi {
-  status = "disabled";
-};
-
-&nice_view {
-  status = "disabled";
-};
-
 &i2c0 {
     status = "okay";
     glidepoint0: glidepoint@2a {
