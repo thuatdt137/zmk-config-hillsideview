@@ -27,11 +27,11 @@
 
 // nice view bus
 &nice_view_spi {
-  status = "disable";
+  status = "disabled";
 };
 
 &nice_view {
-  status = "disable";
+  status = "disabled";
 };
 
 &pinctrl {  
