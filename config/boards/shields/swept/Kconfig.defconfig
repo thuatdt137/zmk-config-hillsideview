@@ -12,6 +12,10 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config ZMK_USB
     default y
 
+endif # SHIELD_SWEPT_LEFT
+
+if SHIELD_SWEPT_LEFT || SHIELD_SWEPT_RIGHT
+
 config ZMK_DISPLAY
     select LV_FONT_MONTSERRAT_26
 
@@ -37,10 +41,6 @@ choice LV_COLOR_DEPTH
 endchoice
 
 endif # ZMK_DISPLAY
-
-endif # SHIELD_SWEPT_LEFT
-
-if SHIELD_SWEPT_LEFT || SHIELD_SWEPT_RIGHT
 
 config ZMK_SPLIT
     default y
