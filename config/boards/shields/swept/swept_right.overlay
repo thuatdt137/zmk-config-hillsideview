@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "hillside_view.dtsi"
+#include "swept.dtsi"
 
 &default_transform {
   col-offset = <6>;
@@ -12,17 +12,13 @@
 
 &kscan0 {
   col-gpios
-    = <&pro_micro 10 GPIO_ACTIVE_HIGH>
-    , <&pro_micro 16 GPIO_ACTIVE_HIGH>
-    , <&pro_micro 14 GPIO_ACTIVE_HIGH>
+    = <&pro_micro 14 GPIO_ACTIVE_HIGH>
     , <&pro_micro 15 GPIO_ACTIVE_HIGH>
     , <&pro_micro 18 GPIO_ACTIVE_HIGH>
-    , <&gpio1 7 GPIO_ACTIVE_HIGH>
+    , <&pro_micro 19 GPIO_ACTIVE_HIGH>
+    , <&pro_micro 20 GPIO_ACTIVE_HIGH>
+    , <&pro_micro 21 GPIO_ACTIVE_HIGH>
     ;
-};
-
-&right_encoder {
-  status = "okay";
 };
 
 &chosen {
@@ -30,11 +26,11 @@
 };
 
 &nice_view_spi {
-  status = "okay";
+  status = "disabled";
 };
 
 &nice_view {
-  status = "okay";
+  status = "disabled";
 };
 
 &i2c0 {
@@ -42,6 +38,38 @@
     glidepoint0: glidepoint@2a {
         status = "okay";
     };
+};
+
+&pinctrl {  
+  i2c0_default: i2c0_default {
+    group1 {
+      psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
+          <NRF_PSEL(TWIM_SCL, 0, 20)>;
+    };
+  };
+
+  i2c0_sleep: i2c0_sleep {
+    group1 {
+      psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
+          <NRF_PSEL(TWIM_SCL, 0, 20)>;
+      low-power-enable;
+    };
+  };
+};
+
+&i2c0 {
+    status = "disabled";
+    glidepoint0: glidepoint@2a {
+        compatible = "cirque,pinnacle";
+        reg = <0x2a>;
+        status = "disabled";
+        dr-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH)>;
+
+        sensitivity = "1x";
+        sleep;
+        // no-taps;
+    };
+
 };
 
 / {

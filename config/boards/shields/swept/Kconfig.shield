@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 
 config SHIELD_HILLSIDE_VIEW_LEFT
-    def_bool $(shields_list_contains,hillside_view_left)
+    def_bool $(shields_list_contains,swept_left)
 
 config SHIELD_HILLSIDE_VIEW_RIGHT
-    def_bool $(shields_list_contains,hillside_view_right)
+    def_bool $(shields_list_contains,swept_right)

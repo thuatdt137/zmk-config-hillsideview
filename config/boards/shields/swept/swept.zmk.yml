@@ -1,8 +1,8 @@
 file_format: "1"
-id: hillside_view
-name: Hillside View
+id: swept2
+name: Swept
 type: shield
-url: https://github.com/wannabecoffeenerd/hillside
+url: https://github.com/thuatdt137/zmk-config-hillsideview
 requires:
   - pro_micro
 exposes:
@@ -12,5 +12,5 @@ features:
   - display
   - underglow
 siblings:
-  - hillside_view_left
-  - hillside_view_right
+  - swept_left
+  - swept_right
