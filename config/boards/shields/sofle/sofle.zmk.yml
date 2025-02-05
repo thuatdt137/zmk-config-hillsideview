@@ -1,8 +1,8 @@
 file_format: "1"
-id: swept2
-name: Swept
+id: sofle1
+name: Sofle
 type: shield
-url: https://github.com/thuatdt137/zmk-config-hillsideview
+url: https://github.com/thuatdt137/zmk-configs
 requires:
   - pro_micro
 exposes:
@@ -12,5 +12,5 @@ features:
   - display
   - underglow
 siblings:
-  - swept_left
-  - swept_right
+  - sofle_left
+  - sofle_right

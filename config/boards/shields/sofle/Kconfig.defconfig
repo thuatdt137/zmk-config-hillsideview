@@ -1,10 +1,10 @@
 # Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_SWEPT_LEFT
+if SHIELD_SOFLE_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Swept"
+    default "Sofle"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
@@ -12,9 +12,9 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config ZMK_USB
     default y
 
-endif # SHIELD_SWEPT_LEFT
+endif # SHIELD_SOFLE_LEFT
 
-if SHIELD_SWEPT_RIGHT
+if SHIELD_SOFLE_RIGHT
 
 config ZMK_DISPLAY
     select LV_FONT_MONTSERRAT_26
@@ -42,9 +42,9 @@ endchoice
 
 endif # ZMK_DISPLAY
 
-endif # SHIELD_SWEPT_RIGHT
+endif # SHIELD_SOFLE_RIGHT
 
-if SHIELD_SWEPT_LEFT || SHIELD_SWEPT_RIGHT
+if SHIELD_SOFLE_LEFT || SHIELD_SOFLE_RIGHT
 
 config ZMK_SPLIT
     default y
@@ -74,4 +74,4 @@ endchoice
 
 endif # LVGL
 
-endif # SHIELD_SWEPT_LEFT || SHIELD_SWEPT_RIGHT
+endif # SHIELD_SOFLE_LEFT || SHIELD_SOFLE_RIGHT
