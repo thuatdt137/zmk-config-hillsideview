@@ -56,10 +56,8 @@ nice_view_spi: &spi1 {
   };
 };
 
-/ {
-    chosen {
-        zephyr,display = &nice_view;
-    };
+&chosen {
+  zephyr,display = &nice_view;
 };
 
 // nice view bus

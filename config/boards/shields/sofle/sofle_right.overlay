@@ -25,10 +25,8 @@
     status = "okay";
 };
 
-/ {
-    chosen {
-        zephyr,display = &nice_view;
-    };
+&chosen {
+  zephyr,display = &nice_view;
 };
 
 // nice view bus
