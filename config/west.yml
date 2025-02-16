@@ -6,13 +6,11 @@ manifest:
       url-base: https://github.com/badjeff
     - name: m165437 #new entry
       url-base: https://github.com/M165437 #new entry
-    - name: petejohanson
-      url-base: https://github.com/petejohanson
   projects:
-    - name: zmk-studio
-      remote: zmkfirmware
-      revision: main
-    # import: app/west.yml
+    #  - name: zmk-studio
+    #  remote: zmkfirmware
+    #  revision: main
+    #  import: app/west.yml
     - name: zmk
       remote: badjeff
       revision: feat/pointers-move-scroll
